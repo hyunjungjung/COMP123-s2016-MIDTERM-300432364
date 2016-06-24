@@ -8,7 +8,7 @@ using System.Threading.Tasks;
  * Student # : 300432364
  * Date : June 24th, 2016
  * Description : LottoGame class for midterm
- * Version : 0.0.2 : Added private instance variables, public properties and initialize();
+ * Version : 0.0.3 : Added build method
  */ 
 namespace COMP123_MidTermExam
 {
@@ -148,14 +148,14 @@ namespace COMP123_MidTermExam
 
         private void _build()
         {
-            int[] SetSize = new int[50];
+            int[] SetSize = new int[49];
             int maxNumber=6;
 
             for (int index = 0; index <maxNumber ; index++)
             {
-                int firstNumber = random.Next(1, 50);
-                int 
-                firstNumber.Add(SetSize);
+                int Number = random.Next(1, 50);
+                SetSize[Number]++;
+                _numberList.Add(Number);
             }
         }
 
