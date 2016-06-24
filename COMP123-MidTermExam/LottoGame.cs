@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/**
+ * Author : Joanne Jung
+ * Student # : 300432364
+ * Date : June 24th, 2016
+ * Description : LottoGame class for midterm
+ * Version : 0.0.2 : Added private instance variables, public properties and initialize();
+ */ 
 namespace COMP123_MidTermExam
 {
     /**
@@ -17,17 +23,64 @@ namespace COMP123_MidTermExam
      */
     public abstract class LottoGame
     {
+
+        // PRIVATE INSTANCE VARIABLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private List<int> _elementList;
         private int _elementNumber;
         private List<int> _numberList;
         private Random _random;
         private int _setSize;
-        // PRIVATE INSTANCE VARIABLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        
         // CREATE private fields here --------------------------------------------
 
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        
+        public List<int> ElementList
+        {
+            get
+            {
+                return this._elementList;
+            }
+        }
+
+        public int ElementNumber
+        {
+            get
+            {
+                return this._elementNumber;
+            }
+            set
+            {
+                this._elementNumber = value;
+            }
+        }
+
+        public List<int> NumberList
+        {
+            get
+            {
+                return this._numberList;
+            }
+
+        }
+
+        public Random random
+        {
+            get
+            {
+                return this._random;
+            }
+        }
+
+        public int SetSize
+        {
+            get
+            {
+                return this._setSize;
+            }
+            set
+            {
+                this._setSize = value;
+            }
+        }
         // CREATE public properties here -----------------------------------------
 
         // CONSTRUCTORS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -58,60 +111,7 @@ namespace COMP123_MidTermExam
             this._build();
         }
 
-        public List<int> ElementList
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public int ElementNumber
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public List<int> NumberList
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public Random random
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public int SetSize
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+ 
 
         // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -146,19 +146,31 @@ namespace COMP123_MidTermExam
             return lottoNumberString;
         }
 
-        public void _build()
+        private void _build()
         {
-            throw new System.NotImplementedException();
+            int[] SetSize = new int[50];
+            int maxNumber=6;
+
+            for (int index = 0; index <maxNumber ; index++)
+            {
+                int firstNumber = random.Next(1, 50);
+                int 
+                firstNumber.Add(SetSize);
+            }
         }
 
-        public void _initialize()
+        private void _initialize()
         {
-            throw new System.NotImplementedException();
+           List<int> _numberList = new List<int>();
+           List<int> _elementList = new List<int>();
+           Random random = new Random();
+ 
         }
 
-        public void PickElements()
+        public void PickElements() 
         {
-            throw new System.NotImplementedException();
+
+
         }
 
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

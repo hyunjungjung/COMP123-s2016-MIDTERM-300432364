@@ -8,8 +8,8 @@ using System.Threading.Tasks;
  * Student # : 300432364
  * Date : June 24th, 2016
  * Description : Lotto649 Class for Midterm s2016
- * Version : 0.0.1 : Initial commit with class diagram
- */ 
+ * Version : 0.0.2 : Added private instance variables, public properties and initialize();
+ */
 namespace COMP123_MidTermExam
 {
     /**
@@ -37,11 +37,14 @@ namespace COMP123_MidTermExam
 
         }
 
-        public void GenerateLottoNumbers()
+        public void GenerateLottoNumbers(LottoGame PickElements)
         {
-            throw new System.NotImplementedException();
+            
+
         }
 
         // CREATE the public GenerateLottoNumbers method here ----------------
+
+
     }
 }
