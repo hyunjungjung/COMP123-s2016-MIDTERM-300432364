@@ -9,7 +9,7 @@ using System.Threading.Tasks;
  * Student # : 300432364
  * Date : June 24th, 2016
  * Description : Main Program for Midterm s2016
- * Version : 0.0.3 : Added build method
+ * Version : 0.0.4 : Final commit
  */
 namespace COMP123_MidTermExam
 {

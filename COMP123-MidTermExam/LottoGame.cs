@@ -8,7 +8,7 @@ using System.Threading.Tasks;
  * Student # : 300432364
  * Date : June 24th, 2016
  * Description : LottoGame class for midterm
- * Version : 0.0.3 : Added build method
+ * Version : 0.0.4 : Final commit
  */ 
 namespace COMP123_MidTermExam
 {
@@ -111,13 +111,35 @@ namespace COMP123_MidTermExam
             this._build();
         }
 
- 
-
         // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        private void _build()
+        {
+
+
+            int[] SetSize = new int[49];
+
+            for (int index = 0; index < ElementNumber; index++)
+            {
+                int Number = random.Next(1, 50);
+                SetSize[Number]++;
+                NumberList.Add(Number);
+            }
+        }
 
         // CREATE the private _initialize method here -----------------------------
+        private void _initialize()
+        {
+            List<int> _numberList = new List<int>();
+            List<int> _elementList = new List<int>();
+            Random random = new Random();
 
+        }
         // CREATE the private _build method here -----------------------------------
+        public void PickElements() 
+        {
+            int randomIndex = this.random.Next(0, NumberList.Count);
+            ElementList.Add(NumberList[randomIndex]);
+        }
 
         // OVERRIDEN METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -146,32 +168,7 @@ namespace COMP123_MidTermExam
             return lottoNumberString;
         }
 
-        private void _build()
-        {
-            int[] SetSize = new int[49];
-            int maxNumber=6;
-
-            for (int index = 0; index <maxNumber ; index++)
-            {
-                int Number = random.Next(1, 50);
-                SetSize[Number]++;
-                _numberList.Add(Number);
-            }
-        }
-
-        private void _initialize()
-        {
-           List<int> _numberList = new List<int>();
-           List<int> _elementList = new List<int>();
-           Random random = new Random();
- 
-        }
-
-        public void PickElements() 
-        {
-
-
-        }
+      
 
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
