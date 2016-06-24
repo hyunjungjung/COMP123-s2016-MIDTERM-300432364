@@ -117,6 +117,8 @@ namespace COMP123_MidTermExam
 
 
             int[] SetSize = new int[49];
+            int randomIndex = this.random.Next(0, NumberList.Count);
+            ElementList.Add(NumberList[randomIndex]);
 
             for (int index = 0; index < ElementNumber; index++)
             {
@@ -137,8 +139,7 @@ namespace COMP123_MidTermExam
         // CREATE the private _build method here -----------------------------------
         public void PickElements() 
         {
-            int randomIndex = this.random.Next(0, NumberList.Count);
-            ElementList.Add(NumberList[randomIndex]);
+          
         }
 
         // OVERRIDEN METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
